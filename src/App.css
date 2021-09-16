@@ -12,27 +12,22 @@
 }
 
 :root {
+  --background-color: #141d2f;
   --primary-color: #0079ff;
   --text-color-error: #f74646;
+  --app-max-width: 100%;
+  --app-margin: 31px 24px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Variables for Desktop */
+  }
 }
 
 @media (min-width: 540px) {
   :root {
-    /* General variables */
-    --calculator-max-width: 540px;
-    --calculator-margin: 28px auto 31px;
-    /* Display variables */
-    --display-font-size: 48px;
-    --display-line-height: 53px;
-    --display-letter-spacing: -0.8px;
-    --display-padding: 38px 32px 36px;
-    /* Number pad variables */
-    --number-pad-font-size: 32px;
-    --number-pad-line-height: 36px;
-    --number-pad-letter-spacing: -0.53px;
-    --number-pad-padding: 32px;
-    --number-pad-gap: 24px;
-    --button-border-radius: 10px;
+    /* Variables for Tablets */
   }
 }
 
@@ -73,4 +68,9 @@ h3 {
 h4 {
   font-size: 13px;
   line-height: 20px;
+}
+
+.app {
+  max-width: var(--app-max-width);
+  margin: var(--app-margin);
 }
