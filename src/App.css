@@ -20,15 +20,15 @@
 }
 
 @media (min-width: 768px) {
-  :root {
-    /* Variables for Desktop */
-  }
+  /* :root { */
+  /* Variables for Desktop */
+  /* } */
 }
 
 @media (min-width: 540px) {
-  :root {
-    /* Variables for Tablets */
-  }
+  /* :root { */
+  /* Variables for Tablets */
+  /* } */
 }
 
 body {
