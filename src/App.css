@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  transition: background-color 200ms linear;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-color: #0079ff;
+  --text-color-error: #f74646;
+}
+
+@media (min-width: 540px) {
+  :root {
+    /* General variables */
+    --calculator-max-width: 540px;
+    --calculator-margin: 28px auto 31px;
+    /* Display variables */
+    --display-font-size: 48px;
+    --display-line-height: 53px;
+    --display-letter-spacing: -0.8px;
+    --display-padding: 38px 32px 36px;
+    /* Number pad variables */
+    --number-pad-font-size: 32px;
+    --number-pad-line-height: 36px;
+    --number-pad-letter-spacing: -0.53px;
+    --number-pad-padding: 32px;
+    --number-pad-gap: 24px;
+    --button-border-radius: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.light-theme {
+  --background-color: #fefefe;
+  --background-color-secondary: #f6f8ff;
+  --text-color: #2b3442;
+  --text-color-secondary: #4b6a9b;
+  --text-color-auxiliary: #697c9a;
+}
+.dark-theme {
+  --background-color: #141d2f;
+  --background-color-secondary: #1e2a47;
+  --text-color: #ffffff;
+  --text-color-secondary: #ffffff;
+  --text-color-auxiliary: #ffffff;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+}
+h2 {
+  font-size: 22px;
+  line-height: 33px;
+}
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+h4 {
+  font-size: 13px;
+  line-height: 20px;
+}
