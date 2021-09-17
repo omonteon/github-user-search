@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import ThemeSwitch from "./components/ThemeSwitch";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
 
 // In this project I'm learning/using for the first time:
 // ...
@@ -9,7 +10,7 @@ import "./App.css";
 // Resources that helped me with the project
 // ...
 
-const THEME_BG_COLOR = { light: "#fefefe", dark: "#141d2f" };
+const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
 
 function App() {
   const defaultTheme = getDefaultTheme();
@@ -56,7 +57,7 @@ function App() {
           <h1>devfinder</h1>
           <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
         </div>
-        {/* TODO: Search bar */}
+        <SearchBar />
         {/* TODO: Search results/Github profile */}
         {/* <div className="attribution">
           Challenge by{" "}
