@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import ThemeSwitch from "./components/ThemeSwitch";
 import "./App.css";
 
 // In this project I'm learning/using for the first time:
@@ -44,12 +45,16 @@ function App() {
     return "light";
   }
 
+  function toggleTheme() {
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+  }
+
   return (
     <>
       <div className={`app theme-${theme}`}>
         <div className="app__header">
           <h1>devfinder</h1>
-          {/* <ThemeSwitch theme={theme} onThemeChange={setTheme} /> */}
+          <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
         </div>
         {/* TODO: Search bar */}
         {/* TODO: Search results/Github profile */}
