@@ -1,4 +1,9 @@
 import React from "react";
+import SingleLineDataWithIcon from "./SingleLineDataWithIcon";
+import LocationIcon from "../../assets/icon-location.svg";
+import WebSiteIcon from "../../assets/icon-website.svg";
+import CompanyIcon from "../../assets/icon-company.svg";
+import TwitterIcon from "../../assets/icon-twitter.svg";
 
 function GitHubProfile({ user = null }) {
   const MONTHS = [
@@ -52,6 +57,18 @@ function GitHubProfile({ user = null }) {
           <span>{user.following}</span>
         </div>
       </div>
+      <SingleLineDataWithIcon data={user.location}>
+        <LocationIcon width={20} />
+      </SingleLineDataWithIcon>
+      <SingleLineDataWithIcon data={user.blog}>
+        <WebSiteIcon width={20} />
+      </SingleLineDataWithIcon>
+      <SingleLineDataWithIcon data={user.twitter_username}>
+        <TwitterIcon width={20} />
+      </SingleLineDataWithIcon>
+      <SingleLineDataWithIcon data={user.company}>
+        <CompanyIcon width={20} />
+      </SingleLineDataWithIcon>
     </div>
   );
 }

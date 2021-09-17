@@ -62,6 +62,7 @@ function App() {
       setUser(user);
       setError(false);
     } catch (error) {
+      setUser(null);
       setError(true);
     }
   }
