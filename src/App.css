@@ -134,9 +134,11 @@ h4 {
   width: 100%;
   display: flex;
   align-items: center;
+  color: var(--text-color);
   background-color: var(--background-color-secondary);
   box-shadow: var(--box-shadow);
   border-radius: 15px;
+  margin-bottom: 16px;
   /* RESPONSIVE STYLES */
   /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
   height: 60px;
@@ -203,4 +205,55 @@ h4 {
 .search-bar > button:active {
   background-color: #60abff;
   cursor: pointer;
+}
+
+/* GITHUB PROFILE */
+
+.github-profile {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--background-color-secondary);
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  /* RESPONSIVE STYLES */
+  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
+  padding: 32px 24px 48px 24px;
+}
+
+.github-profile .top-info {
+  display: flex;
+  margin-bottom: 33px;
+}
+
+.github-profile .top-info img {
+  width: 70px;
+  height: 70px;
+  margin-right: 19px;
+  border-radius: 50%;
+}
+
+.github-profile .top-info__text-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.github-profile .top-info h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.github-profile .top-info .user-handle {
+  font-size: 13px;
+  line-height: 19px;
+  display: block;
+  color: var(--primary-color);
+}
+
+.github-profile .top-info .joined-at {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-color-auxiliary);
 }
