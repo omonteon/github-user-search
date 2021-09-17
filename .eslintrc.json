@@ -13,7 +13,7 @@
   },
   "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
