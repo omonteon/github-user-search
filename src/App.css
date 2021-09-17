@@ -31,6 +31,13 @@
   /* } */
 }
 
+/* Clear button styles */
+button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
 body {
   margin: 0;
   background-color: var(--background-color);
@@ -38,14 +45,14 @@ body {
   line-height: 25px;
 }
 
-.light-theme {
+.theme-light {
   --background-color: #fefefe;
   --background-color-secondary: #f6f8ff;
   --text-color: #2b3442;
   --text-color-secondary: #4b6a9b;
   --text-color-auxiliary: #697c9a;
 }
-.dark-theme {
+.theme-dark {
   --background-color: #141d2f;
   --background-color-secondary: #1e2a47;
   --text-color: #ffffff;
@@ -73,4 +80,40 @@ h4 {
 .app {
   max-width: var(--app-max-width);
   margin: var(--app-margin);
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-bottom: 36px;
+}
+
+.app__header h1 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch:hover {
+  cursor: pointer;
+}
+
+.theme-switch label {
+  text-transform: uppercase;
+  margin-right: 16px;
+  color: var(--text-color-auxiliary);
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+}
+
+.theme-switch button {
+  height: 20px;
 }
