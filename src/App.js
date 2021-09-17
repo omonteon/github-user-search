@@ -4,6 +4,7 @@ import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
+import GitHubProfile from "./components/GitHubProfile";
 
 // In this project I'm learning/using for the first time:
 // SVGR, SVGs in general(when not used as simple images).
@@ -81,7 +82,7 @@ function App() {
           error={error}
           onTextChange={clearErrorMessage}
         />
-        {/* TODO: Search results/Github profile */}
+        {error ? null : <GitHubProfile user={user} />}
         {/* <div className="attribution">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
