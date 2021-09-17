@@ -1,11 +1,11 @@
 import React from "react";
-import iconSearch from "../../assets/icon-search.svg";
+import IconSearch from "../../assets/icon-search.svg";
 
 function SearchBar() {
   return (
     <div className="search-bar">
       <label htmlFor="inputSearch">
-        <img src={iconSearch} alt="search icon" />
+        <IconSearch />
       </label>
       <div className="input-container">
         <input

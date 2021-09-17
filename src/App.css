@@ -147,7 +147,9 @@ h4 {
   height: 20px;
 }
 
-.search-bar > label > img {
+.search-bar > label > svg {
+  /* TODO: RESPONSIVE VARIABLES FOR THIS TOO */
+  width: 20px;
   height: 20px;
 }
 

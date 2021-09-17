@@ -1,12 +1,13 @@
 import React from "react";
-import SvgIcon from "./SvgIcon";
+import SunIcon from "../../assets/icon-sun.svg";
+import MoonIcon from "../../assets/icon-moon.svg";
 
 function ThemeSwitch({ theme, toggleTheme }) {
   return (
     <button className="theme-switch" onClick={toggleTheme}>
       <span>{theme === "light" ? "dark" : "light"}</span>
 
-      {theme === "light" ? <SvgIcon name="moon" /> : <SvgIcon name="sun" />}
+      {theme === "light" ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 }
