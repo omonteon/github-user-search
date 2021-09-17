@@ -166,17 +166,25 @@ h4 {
   padding-right: 7px;
   width: 100%;
   background-color: transparent;
+  caret-color: var(--primary-color);
 }
 
 .search-bar input::placeholder {
   color: var(--text-color-secondary);
   font-size: 13px;
-  /* letter-spacing: -1px; */
 }
 
 .search-bar input:focus {
   outline: none;
-  caret-color: var(--primary-color);
+}
+
+.search-bar .error-message {
+  display: inline-block;
+  margin-right: 7px;
+  color: var(--text-color-error);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 .search-bar > button {

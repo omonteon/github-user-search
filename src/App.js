@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
-import "./App.css";
 import SearchBar from "./components/SearchBar";
+import "./App.css";
 
 // In this project I'm learning/using for the first time:
 // SVGR, SVGs in general(when not used as simple images).
@@ -11,12 +12,15 @@ import SearchBar from "./components/SearchBar";
 // https://stackoverflow.com/questions/14553392/perplexed-by-svg-viewbox-width-height-etc
 // https://css-tricks.com/scale-svg/
 // https://react-svgr.com/
+// https://kentcdodds.com/blog/replace-axios-with-a-simple-custom-fetch-wrapper
 
 const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
 
 function App() {
   const defaultTheme = getDefaultTheme();
   const [theme, setTheme] = useState(defaultTheme);
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("selected-theme", theme);
@@ -51,6 +55,19 @@ function App() {
   function toggleTheme() {
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
   }
+  async function handleSearch(userHandle) {
+    try {
+      const user = await getUser(userHandle);
+      setUser(user);
+      setError(false);
+    } catch (error) {
+      setError(true);
+    }
+  }
+
+  function clearErrorMessage() {
+    setError(false);
+  }
 
   return (
     <>
@@ -59,7 +76,11 @@ function App() {
           <h1>devfinder</h1>
           <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
         </div>
-        <SearchBar />
+        <SearchBar
+          onSearch={handleSearch}
+          error={error}
+          onTextChange={clearErrorMessage}
+        />
         {/* TODO: Search results/Github profile */}
         {/* <div className="attribution">
           Challenge by{" "}
