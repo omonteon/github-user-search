@@ -257,3 +257,40 @@ h4 {
   line-height: 19px;
   color: var(--text-color-auxiliary);
 }
+
+.github-profile .bio {
+  color: var(--text-color-secondary);
+  font-size: 13px;
+  line-height: 25px;
+  margin-bottom: 23px;
+}
+
+.github-profile .metrics {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 15px;
+}
+
+.github-profile .metric {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.github-profile .metrics .metric h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--text-color-secondary);
+}
+
+.github-profile .metrics .metric span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
+}

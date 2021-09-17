@@ -37,6 +37,21 @@ function GitHubProfile({ user = null }) {
           </span>
         </div>
       </div>
+      {user.bio ? <p className="bio">{user.bio}</p> : null}
+      <div className="metrics">
+        <div className="metric">
+          <h3>Repos</h3>
+          <span>{user.public_repos}</span>
+        </div>
+        <div className="metric">
+          <h3>Followers</h3>
+          <span>{user.followers}</span>
+        </div>
+        <div className="metric">
+          <h3>Following</h3>
+          <span>{user.following}</span>
+        </div>
+      </div>
     </div>
   );
 }
