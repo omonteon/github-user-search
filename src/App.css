@@ -106,7 +106,7 @@ h4 {
 
 .theme-switch label {
   text-transform: uppercase;
-  margin-right: 16px;
+  padding-right: 16px;
   color: var(--text-color-auxiliary);
   font-weight: bold;
   font-size: 13px;
