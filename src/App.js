@@ -5,10 +5,12 @@ import "./App.css";
 import SearchBar from "./components/SearchBar";
 
 // In this project I'm learning/using for the first time:
-// ...
+// SVGR, SVGs in general(when not used as simple images).
 
 // Resources that helped me with the project
-// ...
+// https://stackoverflow.com/questions/14553392/perplexed-by-svg-viewbox-width-height-etc
+// https://css-tricks.com/scale-svg/
+// https://react-svgr.com/
 
 const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
 
