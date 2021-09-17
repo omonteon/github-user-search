@@ -46,11 +46,13 @@ body {
 }
 
 .theme-light {
-  --background-color: #fefefe;
-  --background-color-secondary: #f6f8ff;
+  --background-color: #f6f8ff;
+  --background-color-secondary: #fefefe;
   --text-color: #2b3442;
   --text-color-secondary: #4b6a9b;
   --text-color-auxiliary: #697c9a;
+  --text-switch-color-hover: #222731;
+  --box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 .theme-dark {
   --background-color: #141d2f;
@@ -58,6 +60,8 @@ body {
   --text-color: #ffffff;
   --text-color-secondary: #ffffff;
   --text-color-auxiliary: #ffffff;
+  --text-switch-color-hover: #90a4d4;
+  --box-shadow: none;
 }
 
 h1 {
@@ -82,6 +86,8 @@ h4 {
   margin: var(--app-margin);
 }
 
+/* HEADER */
+
 .app__header {
   display: flex;
   justify-content: space-between;
@@ -100,11 +106,7 @@ h4 {
   align-items: center;
 }
 
-.theme-switch:hover {
-  cursor: pointer;
-}
-
-.theme-switch label {
+.theme-switch span {
   text-transform: uppercase;
   padding-right: 16px;
   color: var(--text-color-auxiliary);
@@ -114,6 +116,81 @@ h4 {
   letter-spacing: 2.5px;
 }
 
-.theme-switch button {
+.theme-switch:hover {
+  cursor: pointer;
+}
+
+.theme-switch:hover svg path {
+  fill: var(--text-switch-color-hover);
+}
+
+.theme-switch:hover span {
+  color: var(--text-switch-color-hover); /* TODO: CREATE THIS VARIABLE */
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color-secondary);
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  /* RESPONSIVE STYLES */
+  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
+  height: 60px;
+  padding: 0 7px 0 16px;
+}
+
+.search-bar > label {
   height: 20px;
+}
+
+.search-bar > label > img {
+  height: 20px;
+}
+
+.search-bar .input-container {
+  flex: 2;
+}
+
+.search-bar .input-container > input {
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--text-color);
+  padding-left: 9px;
+  padding-right: 7px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.search-bar input::placeholder {
+  color: var(--text-color-secondary);
+  font-size: 13px;
+  /* letter-spacing: -1px; */
+}
+
+.search-bar input:focus {
+  outline: none;
+  caret-color: var(--primary-color);
+}
+
+.search-bar > button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
+  height: 46px;
+  width: 84px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.search-bar > button:hover,
+.search-bar > button:active {
+  background-color: #60abff;
+  cursor: pointer;
 }
