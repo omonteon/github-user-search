@@ -15,7 +15,7 @@
   --background-color: #141d2f;
   --primary-color: #0079ff;
   --text-color-error: #f74646;
-  --app-max-width: 100%;
+  --app-width: 100%;
   --app-margin: 31px 24px;
 }
 
@@ -26,9 +26,39 @@
 }
 
 @media (min-width: 540px) {
-  /* :root { */
-  /* Variables for Tablets */
-  /* } */
+  :root {
+    /* Variables for Tablets */
+    --app-width: 573px;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    padding-top: 140px;
+  }
+  main .app {
+    padding: 0;
+    margin: 0;
+  }
+  .app .search-bar {
+    height: 69px;
+    padding: 0 10px 0 32px;
+    margin-bottom: 24px;
+  }
+
+  .app .search-bar > button {
+    height: 50px;
+    width: 106px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .app .search-bar > label > svg {
+    width: 24px;
+    height: 24px;
+  }
+  .app .search-bar input::placeholder {
+    font-size: 18px;
+  }
 }
 
 /* Clear button styles */
@@ -82,7 +112,7 @@ h4 {
 }
 
 .app {
-  max-width: var(--app-max-width);
+  width: var(--app-width);
   margin: var(--app-margin);
 }
 
