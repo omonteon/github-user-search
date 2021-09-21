@@ -59,6 +59,9 @@
   .app .search-bar input::placeholder {
     font-size: 18px;
   }
+  .app .github-profile {
+    padding: 40px;
+  }
 }
 
 /* Clear button styles */
