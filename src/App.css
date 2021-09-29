@@ -15,7 +15,7 @@
   --background-color: #141d2f;
   --primary-color: #0079ff;
   --text-color-error: #f74646;
-  --app-width: 100%;
+  --app-width: auto;
   --app-margin: 31px 24px;
 }
 
@@ -61,6 +61,14 @@
   }
   .app .github-profile {
     padding: 40px;
+  }
+  .github-profile .bottom-info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .github-profile .data-with-icon:nth-of-type(2) {
+    grid-row: 2;
   }
 }
 
