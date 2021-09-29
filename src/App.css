@@ -19,13 +19,22 @@
   --app-margin: 31px 24px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   /* :root { */
   /* Variables for Desktop */
   /* } */
+  .app .github-profile .avatar {
+    grid-row: 1 / -1;
+  }
+  .app .github-profile .top-info,
+  .app .github-profile .bio,
+  .app .github-profile .metrics,
+  .app .github-profile .bottom-info {
+    grid-column: 2 / -1;
+  }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 541px) {
   :root {
     /* Variables for Tablets */
     --app-width: 573px;
@@ -256,21 +265,24 @@ h4 {
   background-color: var(--background-color-secondary);
   box-shadow: var(--box-shadow);
   border-radius: 15px;
+  display: grid;
   /* RESPONSIVE STYLES */
   /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
   padding: 32px 24px 48px 24px;
+  grid-template-columns: 70px auto;
+  column-gap: 19px;
+}
+
+.github-profile .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 .github-profile .top-info {
   display: flex;
   margin-bottom: 33px;
-}
-
-.github-profile .top-info img {
-  width: 70px;
-  height: 70px;
-  margin-right: 19px;
-  border-radius: 50%;
+  grid-column: 2 / -1;
 }
 
 .github-profile .top-info__text-data {
@@ -304,6 +316,7 @@ h4 {
   font-size: 13px;
   line-height: 25px;
   margin-bottom: 23px;
+  grid-column: 1 / -1;
 }
 
 .github-profile .metrics {
@@ -314,6 +327,8 @@ h4 {
   justify-content: center;
   padding: 18px 15px;
   margin-bottom: 24px;
+  grid-row: 3;
+  grid-column: 1 / -1;
 }
 
 .github-profile .metric {
@@ -335,6 +350,11 @@ h4 {
   font-size: 16px;
   line-height: 24px;
   margin-top: 4px;
+}
+
+.github-profile .bottom-info {
+  grid-row: 4;
+  grid-column: 1 / -1;
 }
 
 .github-profile .data-with-icon {

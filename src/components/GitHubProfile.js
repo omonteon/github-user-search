@@ -32,8 +32,8 @@ function GitHubProfile({ user = null }) {
   }
   return (
     <div className="github-profile">
+      <img src={user.avatar_url} alt="profile photo" className="avatar" />
       <div className="top-info">
-        <img src={user.avatar_url} alt="profile photo" />
         <div className="top-info__text-data">
           <h2>{user.name}</h2>
           <span className="user-handle">@{user.login}</span>
