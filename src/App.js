@@ -90,17 +90,17 @@ function App() {
         />
         {loading ? "Loading..." : null}
         {error || loading ? null : <GitHubProfile user={user} />}
-        <div className="attribution">
-          Challenge by{" "}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Frontend Mentor
-          </a>
-          . Coded by <a href="https://github.com/omonteon">Omar Monteon</a>.
-        </div>
+      </div>
+      <div className="attribution">
+        Challenge by{" "}
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://github.com/omonteon">Omar Monteon</a>.
       </div>
     </>
   );
