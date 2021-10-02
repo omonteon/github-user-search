@@ -19,21 +19,6 @@
   --app-margin: 31px 24px;
 }
 
-@media (min-width: 769px) {
-  /* :root { */
-  /* Variables for Desktop */
-  /* } */
-  .app .github-profile .avatar {
-    grid-row: 1 / -1;
-  }
-  .app .github-profile .top-info,
-  .app .github-profile .bio,
-  .app .github-profile .metrics,
-  .app .github-profile .bottom-info {
-    grid-column: 2 / -1;
-  }
-}
-
 @media (min-width: 541px) {
   :root {
     /* Variables for Tablets */
@@ -70,14 +55,99 @@
   }
   .app .github-profile {
     padding: 40px;
+    grid-template-columns: 117px auto;
+    column-gap: 37px;
+  }
+  .app .github-profile .avatar {
+    width: 117px;
+    height: 117px;
+  }
+  .app .github-profile .top-info {
+    margin-bottom: 0;
+  }
+  .app .github-profile .top-info h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  .app .github-profile .top-info .user-handle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .app .github-profile .top-info .joined-at {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .app .github-profile .bio {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .app .github-profile .metrics {
+    padding-left: 32px;
+    margin-bottom: 30px;
+  }
+  .github-profile .metrics .metric {
+    text-align: left;
+  }
+  .app .github-profile .metrics .metric h3 {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .app .github-profile .metrics .metric span {
+    font-size: 22px;
+    line-height: 33px;
   }
   .github-profile .bottom-info {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-
+  .app .github-profile .data-with-icon {
+    font-size: 15px;
+    line-height: 22px;
+  }
   .github-profile .data-with-icon:nth-of-type(2) {
     grid-row: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  :root {
+    /* Variables for Desktop */
+    --app-width: 730px;
+  }
+
+  .app .github-profile .avatar {
+    grid-row: 1 / -1;
+  }
+  .app .github-profile .top-info,
+  .app .github-profile .bio,
+  .app .github-profile .metrics,
+  .app .github-profile .bottom-info {
+    grid-column: 2 / -1;
+  }
+
+  .app .github-profile .top-info {
+    display: grid;
+    grid-column: 2 / -1;
+    align-content: center;
+  }
+
+  .app .github-profile .top-info__text-data {
+    display: grid;
+    justify-content: unset;
+  }
+
+  .app .github-profile .top-info .user-handle {
+    grid-column: 1;
+  }
+
+  .app .github-profile .top-info .joined-at {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 
