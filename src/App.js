@@ -15,6 +15,7 @@ import GitHubProfile from "./components/GitHubProfile";
 // https://react-svgr.com/
 // https://kentcdodds.com/blog/replace-axios-with-a-simple-custom-fetch-wrapper
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// https://dev.to/miteshkamat27/how-to-get-cypress-working-on-windows-1b63
 
 const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
 
