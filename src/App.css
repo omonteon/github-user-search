@@ -39,6 +39,9 @@
     margin-bottom: 24px;
   }
 
+  .app .search-bar .error-message {
+    margin-right: 24px;
+  }
   .app .search-bar > button {
     height: 50px;
     width: 106px;
@@ -102,7 +105,8 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-  .app .github-profile .data-with-icon {
+  .app .github-profile .data-with-icon > span,
+  .app .github-profile .data-with-icon > a {
     font-size: 15px;
     line-height: 22px;
   }
@@ -244,10 +248,15 @@ h4 {
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 2.5px;
+  transition: color 200ms linear;
 }
 
 .theme-switch:hover {
   cursor: pointer;
+}
+
+.theme-switch svg path {
+  transition: fill 200ms linear;
 }
 
 .theme-switch:hover svg path {
@@ -255,7 +264,7 @@ h4 {
 }
 
 .theme-switch:hover span {
-  color: var(--text-switch-color-hover); /* TODO: CREATE THIS VARIABLE */
+  color: var(--text-switch-color-hover);
 }
 
 /* SEARCH BAR */
@@ -287,6 +296,11 @@ h4 {
 
 .search-bar .input-container {
   flex: 2;
+  height: 100%;
+}
+
+.search-bar .input-container > input:hover {
+  cursor: pointer;
 }
 
 .search-bar .input-container > input {
@@ -297,6 +311,7 @@ h4 {
   padding-left: 9px;
   padding-right: 7px;
   width: 100%;
+  height: 100%;
   background-color: transparent;
   caret-color: var(--primary-color);
 }
@@ -438,9 +453,6 @@ h4 {
 }
 
 .github-profile .data-with-icon {
-  font-size: 13px;
-  line-height: 19px;
-  color: var(--text-color-secondary);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -451,7 +463,16 @@ h4 {
   opacity: 0.5;
 }
 
-.github-profile .data-with-icon span {
+.github-profile .data-with-icon > span,
+.github-profile .data-with-icon > a {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-color-secondary);
   display: inline-block;
   margin-left: 13px;
+  text-decoration: none;
+}
+
+.github-profile .data-with-icon > a:hover {
+  text-decoration: underline;
 }
