@@ -476,3 +476,13 @@ h4 {
 .github-profile .data-with-icon > a:hover {
   text-decoration: underline;
 }
+
+a {
+  color: var(--text-color-secondary);
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-color-auxiliary);
+}
