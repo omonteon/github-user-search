@@ -21,7 +21,12 @@ function SearchBar({ onSearch, error = false, onTextChange }) {
         />
       </div>
       {error ? <span className="error-message">No results</span> : null}
-      <button onClick={() => onSearch(searchText)}>Search</button>
+      <button
+        onClick={() => onSearch(searchText)}
+        disabled={searchText === "" ? "disabled" : false}
+      >
+        Search
+      </button>
     </div>
   );
 }

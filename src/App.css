@@ -350,6 +350,11 @@ h4 {
   cursor: pointer;
 }
 
+.search-bar > button:disabled {
+  background-color: var(--text-color-auxiliary);
+  cursor: not-allowed;
+}
+
 /* GITHUB PROFILE */
 
 .github-profile {

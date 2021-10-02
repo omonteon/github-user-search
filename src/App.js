@@ -23,6 +23,7 @@ function App() {
   const [theme, setTheme] = useState(defaultTheme);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("selected-theme", theme);
@@ -59,12 +60,15 @@ function App() {
   }
   async function handleSearch(userHandle) {
     try {
+      setLoading(true);
       const user = await getUser(userHandle);
+      setLoading(false);
       setUser(user);
       setError(false);
     } catch (error) {
       setUser(null);
       setError(true);
+      setLoading(false);
     }
   }
 
@@ -84,7 +88,8 @@ function App() {
           error={error}
           onTextChange={clearErrorMessage}
         />
-        {error ? null : <GitHubProfile user={user} />}
+        {loading ? "Loading..." : null}
+        {error || loading ? null : <GitHubProfile user={user} />}
         <div className="attribution">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
