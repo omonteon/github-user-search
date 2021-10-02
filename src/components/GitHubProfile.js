@@ -61,7 +61,7 @@ function GitHubProfile({ user = null }) {
         <SingleLineDataWithIcon data={user.location}>
           <LocationIcon width={20} />
         </SingleLineDataWithIcon>
-        <SingleLineDataWithIcon data={user.blog}>
+        <SingleLineDataWithIcon data={user.blog} link={true}>
           <WebSiteIcon width={20} />
         </SingleLineDataWithIcon>
         <SingleLineDataWithIcon data={user.twitter_username}>
