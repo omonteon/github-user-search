@@ -278,8 +278,6 @@ h4 {
   box-shadow: var(--box-shadow);
   border-radius: 15px;
   margin-bottom: 16px;
-  /* RESPONSIVE STYLES */
-  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
   height: 60px;
   padding: 0 7px 0 16px;
 }
@@ -289,7 +287,6 @@ h4 {
 }
 
 .search-bar > label > svg {
-  /* TODO: RESPONSIVE VARIABLES FOR THIS TOO */
   width: 20px;
   height: 20px;
 }
@@ -339,7 +336,6 @@ h4 {
   color: white;
   border-radius: 10px;
   font-weight: bold;
-  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
   height: 46px;
   width: 84px;
   font-size: 14px;
@@ -361,8 +357,6 @@ h4 {
   box-shadow: var(--box-shadow);
   border-radius: 15px;
   display: grid;
-  /* RESPONSIVE STYLES */
-  /* TODO: EVALUATE IF I CAN USE VARIABLES FOR THESE VALUES */
   padding: 32px 24px 48px 24px;
   grid-template-columns: 70px auto;
   column-gap: 19px;
