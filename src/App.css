@@ -81,12 +81,11 @@
     line-height: 22px;
   }
   .app .github-profile .bio {
-    margin-top: 24px;
-    margin-bottom: 32px;
     font-size: 15px;
     line-height: 25px;
   }
   .app .github-profile .metrics {
+    margin-top: 24px;
     padding-left: 32px;
     margin-bottom: 30px;
   }
@@ -370,7 +369,6 @@ h4 {
 
 .github-profile .top-info {
   display: flex;
-  margin-bottom: 33px;
   grid-column: 2 / -1;
 }
 
@@ -404,7 +402,8 @@ h4 {
   color: var(--text-color-secondary);
   font-size: 13px;
   line-height: 25px;
-  margin-bottom: 23px;
+  margin-top: 33px;
+  margin-bottom: 0;
   grid-column: 1 / -1;
 }
 
@@ -415,6 +414,7 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 18px 15px;
+  margin-top: 23px;
   margin-bottom: 24px;
   grid-row: 3;
   grid-column: 1 / -1;
