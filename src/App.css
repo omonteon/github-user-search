@@ -117,8 +117,12 @@
     --app-width: 730px;
   }
 
+  .app .github-profile {
+    padding: 48px;
+  }
+
   .app .github-profile .avatar {
-    grid-row: 1 / -1;
+    grid-row: 1 / 4;
   }
   .app .github-profile .top-info,
   .app .github-profile .bio,
@@ -148,6 +152,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+  .app .github-profile .bio {
+    margin-top: 20px;
+  }
+  .app .github-profile .metrics {
+    margin-bottom: 37px;
   }
 }
 
