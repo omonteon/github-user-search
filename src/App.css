@@ -108,6 +108,9 @@
   .app .github-profile .data-with-icon > a {
     font-size: 15px;
     line-height: 22px;
+    text-overflow: ellipsis;
+    max-width: 280px;
+    overflow: hidden;
   }
   .github-profile .data-with-icon:nth-of-type(2) {
     grid-row: 2;
@@ -465,6 +468,9 @@ h4 {
   display: inline-block;
   margin-left: 13px;
   text-decoration: none;
+  text-overflow: ellipsis;
+  max-width: 240px;
+  overflow: hidden;
 }
 
 .github-profile .data-with-icon > a:hover {
