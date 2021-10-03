@@ -3,8 +3,12 @@ import IconSearch from "../../assets/icon-search.svg";
 
 function SearchBar({ onSearch, error = false, onTextChange }) {
   const [searchText, setSearchText] = useState("");
+  function submitForm(event) {
+    event.preventDefault();
+    onSearch(searchText);
+  }
   return (
-    <div className="search-bar">
+    <form className="search-bar" onSubmit={submitForm}>
       <label htmlFor="inputSearch">
         <IconSearch />
       </label>
@@ -21,13 +25,10 @@ function SearchBar({ onSearch, error = false, onTextChange }) {
         />
       </div>
       {error ? <span className="error-message">No results</span> : null}
-      <button
-        onClick={() => onSearch(searchText)}
-        disabled={searchText === "" ? "disabled" : false}
-      >
+      <button type="submit" disabled={searchText === "" ? "disabled" : false}>
         Search
       </button>
-    </div>
+    </form>
   );
 }
 
