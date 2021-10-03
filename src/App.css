@@ -25,9 +25,10 @@
     --app-width: 573px;
   }
   main {
-    display: flex;
-    justify-content: center;
     padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   main .app {
     padding: 0;
@@ -114,12 +115,6 @@
   }
   .github-profile .data-with-icon:nth-of-type(2) {
     grid-row: 2;
-  }
-  .attribution {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
   }
 }
 
@@ -357,7 +352,7 @@ h4 {
 }
 
 .search-bar > button:disabled {
-  background-color: var(--text-color-auxiliary);
+  background-color: #697c9a;
   cursor: not-allowed;
 }
 
@@ -497,4 +492,5 @@ a {
   color: var(--text-color-auxiliary);
   margin-top: 20px;
   padding: 10px 24px;
+  text-align: center;
 }

@@ -78,8 +78,8 @@ function App() {
   }
 
   return (
-    <>
-      <div className={`app theme-${theme}`}>
+    <div className={`theme-${theme}`}>
+      <div className="app">
         <div className="app__header">
           <h1>devfinder</h1>
           <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
@@ -103,7 +103,7 @@ function App() {
         </a>
         . Coded by <a href="https://github.com/omonteon">Omar Monteon</a>.
       </div>
-    </>
+    </div>
   );
 }
 
