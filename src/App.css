@@ -19,7 +19,7 @@ body *::after {
   --app-margin: 31px 24px;
 }
 
-@media (min-width: 541px) {
+@media (min-width: 573px) {
   :root {
     /* Variables for Tablets */
     --app-width: 573px;
@@ -118,7 +118,7 @@ body *::after {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   :root {
     /* Variables for Desktop */
     --app-width: 730px;
