@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IconSearch from "../../assets/icon-search.svg";
+const INITIAL_USERNAME = "octocat";
 
 function SearchBar({ onSearch, error = false, onTextChange }) {
   const [searchText, setSearchText] = useState("");
+  useEffect(() => {
+    onSearch(INITIAL_USERNAME);
+  }, []);
   function submitForm(event) {
     event.preventDefault();
     onSearch(searchText);
