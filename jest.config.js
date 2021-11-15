@@ -6,6 +6,7 @@ module.exports = {
   transform: {
     "^.+\\.js$": "babel-jest",
     ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform",
+    "^.+\\.svg$": "./fileTransformer.js",
   },
   globals: {
     NODE_ENV: "test",
