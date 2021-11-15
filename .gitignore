@@ -16,7 +16,8 @@
 .prettierignore
 
 node_modules
-.cache/
+.parcel-cache
+.cache
 dist/
 .env
 coverage/
