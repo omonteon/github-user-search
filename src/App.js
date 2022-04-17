@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
 import SearchBar from "./components/SearchBar";
-import "./App.css";
 import GitHubProfile from "./components/GitHubProfile";
+import "./App.css";
 
 // In this project I'm learning/using for the first time:
 // SVGR, SVGs in general(when not used as simple images).
@@ -107,4 +107,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;

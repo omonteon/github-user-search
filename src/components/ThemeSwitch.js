@@ -1,6 +1,6 @@
 import React from "react";
-import SunIcon from "../../assets/icon-sun.svg";
-import MoonIcon from "../../assets/icon-moon.svg";
+import { ReactComponent as SunIcon } from '../assets/icon-sun.svg';
+import { ReactComponent as MoonIcon } from '../assets/icon-moon.svg';
 
 function ThemeSwitch({ theme, toggleTheme }) {
   return (

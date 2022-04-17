@@ -1,9 +1,9 @@
 import React from "react";
 import SingleLineDataWithIcon from "./SingleLineDataWithIcon";
-import LocationIcon from "../../assets/icon-location.svg";
-import WebSiteIcon from "../../assets/icon-website.svg";
-import CompanyIcon from "../../assets/icon-company.svg";
-import TwitterIcon from "../../assets/icon-twitter.svg";
+import { ReactComponent as LocationIcon } from '../assets/icon-location.svg';
+import { ReactComponent as WebSiteIcon } from '../assets/icon-website.svg';
+import { ReactComponent as CompanyIcon } from '../assets/icon-company.svg';
+import { ReactComponent as TwitterIcon } from '../assets/icon-twitter.svg';
 
 function GitHubProfile({ user = null }) {
   const MONTHS = [

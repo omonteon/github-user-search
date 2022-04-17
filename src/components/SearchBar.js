@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import IconSearch from "../../assets/icon-search.svg";
+import { ReactComponent as IconSearch } from '../assets/icon-search.svg';
 const INITIAL_USERNAME = "octocat";
 
 function SearchBar({ onSearch, error = false, onTextChange }) {
