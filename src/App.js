@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
 import SearchBar from "./components/SearchBar";
