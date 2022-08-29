@@ -55,9 +55,6 @@ body *::after {
     background-position: 32px center;
   }
 
-  .app .search-bar input {
-  }
-
   .app .search-bar .error-message {
     margin-right: 24px;
   }
