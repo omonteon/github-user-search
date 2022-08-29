@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { ReactComponent as IconSearch } from "../assets/icon-search.svg";
-const INITIAL_USERNAME = "octocat";
+import React, { useState } from "react";
 
 function SearchBar({ onSearch, error = false, onTextChange }) {
   const [searchText, setSearchText] = useState("");
-  useEffect(() => {
-    onSearch(INITIAL_USERNAME);
-  }, [onSearch]);
+
   function submitForm(event) {
     event.preventDefault();
     onSearch(searchText);
   }
   return (
     <form className="search-bar" onSubmit={submitForm}>
-      <label htmlFor="inputSearch">
-        <IconSearch />
+      <label htmlFor="inputSearch" className="sr-only">
+        Enter githhub username
       </label>
       <div className="input-container">
         <input

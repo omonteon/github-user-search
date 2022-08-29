@@ -17,6 +17,7 @@ import "./App.css";
 // https://dev.to/miteshkamat27/how-to-get-cypress-working-on-windows-1b63
 
 const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
+const INITIAL_USERNAME = "octocat";
 
 function App() {
   const defaultTheme = getDefaultTheme();
@@ -30,6 +31,12 @@ function App() {
     const root = window.document.documentElement;
     root.style.setProperty("--background-color", THEME_BG_COLOR[theme]);
   }, [theme]);
+
+  useEffect(() => {
+    if (!user) {
+      handleSearch(INITIAL_USERNAME);
+    }
+  }, [user]);
 
   function getDefaultTheme() {
     const persistedThemePreference = localStorage.getItem("selected-theme");
@@ -75,7 +82,7 @@ function App() {
   function clearErrorMessage() {
     setError(false);
   }
-
+  console.log("Render APP");
   return (
     <div className={`theme-${theme}`}>
       <div className="app">
