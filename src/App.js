@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
 import SearchBar from "./components/SearchBar";
@@ -25,6 +25,11 @@ function App() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const liveRegion = useRef(null);
+
+  useEffect(() => {
+    handleSearch(INITIAL_USERNAME);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("selected-theme", theme);
@@ -33,10 +38,14 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    if (!user) {
-      handleSearch(INITIAL_USERNAME);
+    if (error) {
+      liveRegion.current.textContent = "No results found for search.";
+      const timeout = setTimeout(() => {
+        liveRegion.current.textContent = "";
+      }, 200);
+      return () => clearTimeout(timeout);
     }
-  }, [user]);
+  }, [error, loading]);
 
   function getDefaultTheme() {
     const persistedThemePreference = localStorage.getItem("selected-theme");
@@ -82,7 +91,6 @@ function App() {
   function clearErrorMessage() {
     setError(false);
   }
-  console.log("Render APP");
   return (
     <div className={`theme-${theme}`}>
       <div className="app">
@@ -97,6 +105,7 @@ function App() {
         />
         {loading ? "Loading..." : null}
         {error || loading ? null : <GitHubProfile user={user} />}
+        <div ref={liveRegion} className="sr-only" aria-live="polite"></div>
       </div>
       <div className="attribution">
         Challenge by{" "}
