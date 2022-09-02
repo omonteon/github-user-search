@@ -1,9 +1,9 @@
 import React from "react";
 import SingleLineDataWithIcon from "./SingleLineDataWithIcon";
-import { ReactComponent as LocationIcon } from '../assets/icon-location.svg';
-import { ReactComponent as WebSiteIcon } from '../assets/icon-website.svg';
-import { ReactComponent as CompanyIcon } from '../assets/icon-company.svg';
-import { ReactComponent as TwitterIcon } from '../assets/icon-twitter.svg';
+import { ReactComponent as LocationIcon } from "../assets/icon-location.svg";
+import { ReactComponent as WebSiteIcon } from "../assets/icon-website.svg";
+import { ReactComponent as CompanyIcon } from "../assets/icon-company.svg";
+import { ReactComponent as TwitterIcon } from "../assets/icon-twitter.svg";
 
 function GitHubProfile({ user = null }) {
   const MONTHS = [
@@ -32,7 +32,7 @@ function GitHubProfile({ user = null }) {
   }
   return (
     <div className="github-profile">
-      <img src={user.avatar_url} alt="profile avatar" className="avatar" />
+      <img src={user.avatar_url} alt={user.name} className="avatar" />
       <div className="top-info">
         <div className="top-info__text-data">
           <h2>{user.name}</h2>
