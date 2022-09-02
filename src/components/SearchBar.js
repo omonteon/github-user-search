@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function SearchBar({ onSearch, error = false, onTextChange }) {
   const [searchText, setSearchText] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (error) {
+      inputRef.current.ariaInvalid = "true";
+    } else {
+      inputRef.current.ariaInvalid = "false";
+    }
+  }, [error]);
 
   function submitForm(event) {
     event.preventDefault();
@@ -14,10 +23,12 @@ function SearchBar({ onSearch, error = false, onTextChange }) {
       </label>
       <div className="input-container">
         <input
+          ref={inputRef}
           type="text"
           id="inputSearch"
           placeholder="Search Github username&#8230;"
           value={searchText}
+          aria-invalid="false"
           onChange={(e) => {
             setSearchText(e.target.value);
             onTextChange();
