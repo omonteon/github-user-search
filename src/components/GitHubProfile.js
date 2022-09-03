@@ -55,20 +55,6 @@ function GitHubProfile({ user = null }) {
           <p>{user.following}</p>
         </li>
       </ul>
-      {/* <div className="metrics">
-        <div className="metric">
-          <h3>Repos</h3>
-          <p>{user.public_repos}</p>
-        </div>
-        <div className="metric">
-          <h3>Followers</h3>
-          <p>{user.followers}</p>
-        </div>
-        <div className="metric">
-          <h3>Following</h3>
-          <p>{user.following}</p>
-        </div>
-      </div> */}
       <div className="bottom-info">
         <SingleLineDataWithIcon data={user.location}>
           <LocationIcon width={20} />
