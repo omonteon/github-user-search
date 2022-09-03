@@ -41,7 +41,21 @@ function GitHubProfile({ user = null }) {
         </div>
       </div>
       {user.bio ? <p className="bio">{user.bio}</p> : null}
-      <div className="metrics">
+      <ul className="metrics">
+        <li className="metric">
+          <h3>Repos</h3>
+          <p>{user.public_repos}</p>
+        </li>
+        <li className="metric">
+          <h3>Followers</h3>
+          <p>{user.followers}</p>
+        </li>
+        <li className="metric">
+          <h3>Following</h3>
+          <p>{user.following}</p>
+        </li>
+      </ul>
+      {/* <div className="metrics">
         <div className="metric">
           <h3>Repos</h3>
           <p>{user.public_repos}</p>
@@ -54,7 +68,7 @@ function GitHubProfile({ user = null }) {
           <h3>Following</h3>
           <p>{user.following}</p>
         </div>
-      </div>
+      </div> */}
       <div className="bottom-info">
         <SingleLineDataWithIcon data={user.location}>
           <LocationIcon width={20} />
