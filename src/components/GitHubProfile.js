@@ -62,16 +62,15 @@ function GitHubProfile({ user = null }) {
           </SingleLineDataWithIcon>
         </li>
         <li>
-          <SingleLineDataWithIcon data={user.twitter_username}>
-            <TwitterIcon width={20} />
-          </SingleLineDataWithIcon>
-        </li>
-        <li>
           <SingleLineDataWithIcon data={user.blog} link={true}>
             <WebSiteIcon width={20} />
           </SingleLineDataWithIcon>
         </li>
-
+        <li>
+          <SingleLineDataWithIcon data={user.twitter_username}>
+            <TwitterIcon width={20} />
+          </SingleLineDataWithIcon>
+        </li>
         <li>
           <SingleLineDataWithIcon data={user.company}>
             <CompanyIcon width={20} />
