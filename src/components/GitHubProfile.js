@@ -55,20 +55,29 @@ function GitHubProfile({ user = null }) {
           <p>{user.following}</p>
         </li>
       </ul>
-      <div className="bottom-info">
-        <SingleLineDataWithIcon data={user.location}>
-          <LocationIcon width={20} />
-        </SingleLineDataWithIcon>
-        <SingleLineDataWithIcon data={user.blog} link={true}>
-          <WebSiteIcon width={20} />
-        </SingleLineDataWithIcon>
-        <SingleLineDataWithIcon data={user.twitter_username}>
-          <TwitterIcon width={20} />
-        </SingleLineDataWithIcon>
-        <SingleLineDataWithIcon data={user.company}>
-          <CompanyIcon width={20} />
-        </SingleLineDataWithIcon>
-      </div>
+      <ul className="bottom-info">
+        <li>
+          <SingleLineDataWithIcon data={user.location}>
+            <LocationIcon width={20} />
+          </SingleLineDataWithIcon>
+        </li>
+        <li>
+          <SingleLineDataWithIcon data={user.twitter_username}>
+            <TwitterIcon width={20} />
+          </SingleLineDataWithIcon>
+        </li>
+        <li>
+          <SingleLineDataWithIcon data={user.blog} link={true}>
+            <WebSiteIcon width={20} />
+          </SingleLineDataWithIcon>
+        </li>
+
+        <li>
+          <SingleLineDataWithIcon data={user.company}>
+            <CompanyIcon width={20} />
+          </SingleLineDataWithIcon>
+        </li>
+      </ul>
     </div>
   );
 }

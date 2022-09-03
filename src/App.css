@@ -466,24 +466,27 @@ p {
   margin-top: 4px;
 }
 
-.github-profile .bottom-info {
+.github-profile ul.bottom-info {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
   grid-row: 4;
   grid-column: 1 / -1;
 }
 
-.github-profile .data-with-icon {
+.github-profile li > .data-with-icon {
   margin-bottom: 16px;
   display: flex;
   align-items: center;
 }
 
-.github-profile .data-with-icon.disabled {
+.github-profile li > .data-with-icon.disabled {
   color: var(--text-color-secondary);
   opacity: 0.5;
 }
 
-.github-profile .data-with-icon > p,
-.github-profile .data-with-icon > a {
+.github-profile li > .data-with-icon > p,
+.github-profile li > .data-with-icon > a {
   font-size: 13px;
   line-height: 19px;
   color: var(--text-color-secondary);
@@ -495,7 +498,7 @@ p {
   overflow: hidden;
 }
 
-.github-profile .data-with-icon > a:hover {
+.github-profile li > .data-with-icon > a:hover {
   text-decoration: underline;
 }
 
