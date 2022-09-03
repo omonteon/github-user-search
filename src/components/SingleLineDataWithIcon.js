@@ -10,10 +10,10 @@ function SingleLineDataWithIcon({ data = "", link = false, children }) {
             {data}
           </a>
         ) : (
-          <span>{data}</span>
+          <p>{data}</p>
         )
       ) : (
-        <span className="not-available">Not available</span>
+        <p className="not-available">Not available</p>
       )}
     </div>
   );

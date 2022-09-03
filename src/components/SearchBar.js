@@ -35,7 +35,7 @@ function SearchBar({ onSearch, error = false, onTextChange }) {
           }}
         />
       </div>
-      {error ? <span className="error-message">No results</span> : null}
+      {error ? <p className="error-message">No results</p> : null}
       <button type="submit" disabled={searchText === "" ? "disabled" : false}>
         Search
       </button>

@@ -36,25 +36,23 @@ function GitHubProfile({ user = null }) {
       <div className="top-info">
         <div className="top-info__text-data">
           <h2>{user.name}</h2>
-          <span className="user-handle">@{user.login}</span>
-          <span className="joined-at">
-            Joined {getJoinedAtDate(user.created_at)}
-          </span>
+          <p className="user-handle">@{user.login}</p>
+          <p className="joined-at">Joined {getJoinedAtDate(user.created_at)}</p>
         </div>
       </div>
       {user.bio ? <p className="bio">{user.bio}</p> : null}
       <div className="metrics">
         <div className="metric">
           <h3>Repos</h3>
-          <span>{user.public_repos}</span>
+          <p>{user.public_repos}</p>
         </div>
         <div className="metric">
           <h3>Followers</h3>
-          <span>{user.followers}</span>
+          <p>{user.followers}</p>
         </div>
         <div className="metric">
           <h3>Following</h3>
-          <span>{user.following}</span>
+          <p>{user.following}</p>
         </div>
       </div>
       <div className="bottom-info">

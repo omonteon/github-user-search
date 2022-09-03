@@ -108,7 +108,7 @@ body *::after {
     font-size: 13px;
     line-height: 19px;
   }
-  .app .github-profile .metrics .metric span {
+  .app .github-profile .metrics .metric p {
     font-size: 22px;
     line-height: 33px;
   }
@@ -116,7 +116,7 @@ body *::after {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-  .app .github-profile .data-with-icon > span,
+  .app .github-profile .data-with-icon > p,
   .app .github-profile .data-with-icon > a {
     font-size: 15px;
     line-height: 22px;
@@ -254,7 +254,7 @@ h4 {
   align-items: center;
 }
 
-.theme-switch span {
+.theme-switch p {
   text-transform: uppercase;
   padding-right: 16px;
   color: var(--text-color-auxiliary);
@@ -277,7 +277,7 @@ h4 {
   fill: var(--text-switch-color-hover);
 }
 
-.theme-switch:hover span {
+.theme-switch:hover p {
   color: var(--text-switch-color-hover);
 }
 
@@ -453,7 +453,7 @@ h4 {
   color: var(--text-color-secondary);
 }
 
-.github-profile .metrics .metric span {
+.github-profile .metrics .metric p {
   display: inline-block;
   font-weight: bold;
   font-size: 16px;
@@ -477,7 +477,7 @@ h4 {
   opacity: 0.5;
 }
 
-.github-profile .data-with-icon > span,
+.github-profile .data-with-icon > p,
 .github-profile .data-with-icon > a {
   font-size: 13px;
   line-height: 19px;
