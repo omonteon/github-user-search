@@ -254,9 +254,10 @@ p {
 .theme-switch {
   display: flex;
   align-items: center;
+  border: none;
 }
 
-.theme-switch p {
+.theme-switch label {
   text-transform: uppercase;
   padding-right: 16px;
   color: var(--text-color-auxiliary);
@@ -265,10 +266,24 @@ p {
   line-height: 19px;
   letter-spacing: 2.5px;
   transition: color 200ms linear;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .theme-switch:hover {
   cursor: pointer;
+}
+
+.theme-switch input[type="radio"] {
+  opacity: 0;
+}
+
+.theme-switch input[type="radio"]:checked,
+.theme-switch input[type="radio"]:checked + label {
+  position: absolute;
+  right: -100%;
+  opacity: 0;
 }
 
 .theme-switch svg path {
