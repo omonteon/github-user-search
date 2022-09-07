@@ -287,8 +287,8 @@ p {
 
 .theme-switch input[type="radio"]:checked,
 .theme-switch input[type="radio"]:checked + label {
+  z-index: -1;
   position: absolute;
-  right: -100%;
   opacity: 0;
 }
 
