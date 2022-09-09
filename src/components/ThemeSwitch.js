@@ -1,23 +1,13 @@
 import React from "react";
 import { ReactComponent as SunIcon } from "../assets/icon-sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icon-moon.svg";
-
-// function ThemeSwitch({ theme, toggleTheme }) {
-//   return (
-//     <button className="theme-switch" onClick={toggleTheme}>
-//       <p>{theme === "light" ? "dark" : "light"}</p>
-
-//       {theme === "light" ? <MoonIcon /> : <SunIcon />}
-//     </button>
-//   );
-// }
+import styles from "./ThemeSwitch.module.css";
 
 function ThemeSwitch_({ theme, toggleTheme }) {
   return (
-    <fieldset className="theme-switch">
+    <fieldset className={styles["theme-switch"]}>
       <legend className="sr-only">Color mode selections</legend>
       <input
-        className="colormodes__input"
         type="radio"
         id="lightmode"
         name="colormode"
@@ -26,18 +16,17 @@ function ThemeSwitch_({ theme, toggleTheme }) {
         defaultChecked
         onChange={toggleTheme}
       />
-      <label htmlFor="lightmode" className="colormodes__toggler">
+      <label htmlFor="lightmode">
         LIGHT <SunIcon />
       </label>
       <input
-        className="colormodes__input"
         type="radio"
         id="darkmode"
         name="colormode"
         aria-label="darkmode"
         onChange={toggleTheme}
       />
-      <label htmlFor="darkmode" className="colormodes__toggler">
+      <label htmlFor="darkmode">
         DARK <MoonIcon />
       </label>
       <div className="colormodes__focus-trick"></div>
