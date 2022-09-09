@@ -1,9 +1,9 @@
 import React from "react";
-import { ReactComponent as SunIcon } from "../assets/icon-sun.svg";
-import { ReactComponent as MoonIcon } from "../assets/icon-moon.svg";
+import { ReactComponent as SunIcon } from "../../assets/icon-sun.svg";
+import { ReactComponent as MoonIcon } from "../../assets/icon-moon.svg";
 import styles from "./ThemeSwitch.module.css";
 
-function ThemeSwitch_({ theme, toggleTheme }) {
+function ThemeSwitch({ theme, toggleTheme }) {
   return (
     <fieldset className={styles["theme-switch"]}>
       <legend className="sr-only">Color mode selections</legend>
@@ -34,5 +34,4 @@ function ThemeSwitch_({ theme, toggleTheme }) {
   );
 }
 
-// export default ThemeSwitch;
-export default ThemeSwitch_;
+export default ThemeSwitch;
