@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+:root {
+  --background-color: #141d2f;
+  --primary-color: #0079ff;
+  --text-color-error: #f74646;
+  --app-width: auto;
+  --app-margin: 31px 24px;
+}
+
 body * {
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
@@ -9,49 +17,6 @@ body * {
 body *::before,
 body *::after {
   box-sizing: inherit;
-}
-
-:root {
-  --background-color: #141d2f;
-  --primary-color: #0079ff;
-  --text-color-error: #f74646;
-  --app-width: auto;
-  --app-margin: 31px 24px;
-}
-
-.sr-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-@media (min-width: 573px) {
-  :root {
-    /* Variables for Tablets */
-    --app-width: 573px;
-  }
-  main {
-    padding-top: 140px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .app {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    /* Variables for Desktop */
-    --app-width: 730px;
-  }
 }
 
 /* Clear button styles */
@@ -108,26 +73,6 @@ p {
   margin: 0;
 }
 
-.app {
-  width: var(--app-width);
-  margin: var(--app-margin);
-}
-
-/* HEADER */
-
-.app__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-  margin-bottom: 36px;
-}
-
-.app__header h1 {
-  margin: 0;
-  color: var(--text-color);
-}
-
 a {
   color: var(--text-color-secondary);
 }
@@ -138,4 +83,34 @@ a {
   margin-top: 20px;
   padding: 10px 24px;
   text-align: center;
+}
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (min-width: 573px) {
+  :root {
+    /* Variables for Tablets */
+    --app-width: 573px;
+  }
+  main {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Variables for Desktop */
+    --app-width: 730px;
+  }
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { getUser } from "./api/user-client";
-import ThemeSwitch from "./components/ThemeSwitch";
-import SearchBar from "./components/SearchBar";
-import GitHubProfile from "./components/GithubProfile";
-import { INITIAL_USERNAME, THEME_BG_COLOR } from "./constants";
-import "./App.css";
+import { getUser } from "../../api/user-client";
+import ThemeSwitch from "../ThemeSwitch";
+import SearchBar from "../SearchBar";
+import GitHubProfile from "../GithubProfile";
+import { INITIAL_USERNAME, THEME_BG_COLOR } from "../../constants";
+import styles from "./App.module.css";
 
 // In this project I'm learning/using for the first time:
 // SVGR, SVGs in general(when not used as simple images).
@@ -91,8 +91,8 @@ function App() {
   }
   return (
     <div className={`theme-${theme}`}>
-      <div className="app">
-        <div className="app__header">
+      <div className={styles["app"]}>
+        <div className={styles["app__header"]}>
           <h1>devfinder</h1>
           <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
         </div>
