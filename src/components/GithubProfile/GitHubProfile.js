@@ -1,25 +1,12 @@
 import React from "react";
-import SingleLineDataWithIcon from "./SingleLineDataWithIcon";
-import { ReactComponent as LocationIcon } from "../assets/icon-location.svg";
-import { ReactComponent as WebSiteIcon } from "../assets/icon-website.svg";
-import { ReactComponent as CompanyIcon } from "../assets/icon-company.svg";
-import { ReactComponent as TwitterIcon } from "../assets/icon-twitter.svg";
+import SingleLineDataWithIcon from "../SingleLineDataWithIcon";
+import { ReactComponent as LocationIcon } from "../../assets/icon-location.svg";
+import { ReactComponent as WebSiteIcon } from "../../assets/icon-website.svg";
+import { ReactComponent as CompanyIcon } from "../../assets/icon-company.svg";
+import { ReactComponent as TwitterIcon } from "../../assets/icon-twitter.svg";
+import { MONTHS } from "../../constants";
 
 function GitHubProfile({ user = null }) {
-  const MONTHS = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
   if (user === null) {
     return null;
   }

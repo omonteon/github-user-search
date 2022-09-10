@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { getUser } from "./api/user-client";
 import ThemeSwitch from "./components/ThemeSwitch";
 import SearchBar from "./components/SearchBar";
-import GitHubProfile from "./components/GitHubProfile";
+import GitHubProfile from "./components/GithubProfile";
+import { INITIAL_USERNAME, THEME_BG_COLOR } from "./constants";
 import "./App.css";
 
 // In this project I'm learning/using for the first time:
@@ -15,9 +16,6 @@ import "./App.css";
 // https://kentcdodds.com/blog/replace-axios-with-a-simple-custom-fetch-wrapper
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 // https://dev.to/miteshkamat27/how-to-get-cypress-working-on-windows-1b63
-
-const THEME_BG_COLOR = { light: "#f6f8ff", dark: "#141d2f" };
-const INITIAL_USERNAME = "octocat";
 
 function App() {
   const defaultTheme = getDefaultTheme();
