@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./SingleLineDataWithIcon.module.css";
 
 function SingleLineDataWithIcon({ data = "", link = false, children }) {
   return (
-    <div className={`data-with-icon ${data ? "" : "disabled"}`}>
+    <div className={`${styles["data-with-icon"]} ${data ? "" : "disabled"}`}>
       {children}
       {data ? (
         link ? (
