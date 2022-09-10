@@ -114,14 +114,6 @@ body *::after {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-  .app .github-profile .data-with-icon > p,
-  .app .github-profile .data-with-icon > a {
-    font-size: 15px;
-    line-height: 22px;
-    text-overflow: ellipsis;
-    max-width: 280px;
-    overflow: hidden;
-  }
   .github-profile .bottom-info li:nth-of-type(2) {
     grid-row: 2;
   }
@@ -442,34 +434,6 @@ p {
   margin: 0;
   grid-row: 4;
   grid-column: 1 / -1;
-}
-
-.github-profile .data-with-icon {
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.github-profile .data-with-icon.disabled {
-  color: var(--text-color-secondary);
-  opacity: 0.5;
-}
-
-.github-profile .data-with-icon > p,
-.github-profile .data-with-icon > a {
-  font-size: 13px;
-  line-height: 19px;
-  color: var(--text-color-secondary);
-  display: inline-block;
-  margin-left: 13px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  max-width: 240px;
-  overflow: hidden;
-}
-
-.github-profile .data-with-icon > a:hover {
-  text-decoration: underline;
 }
 
 a {
