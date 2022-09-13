@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import SearchBar from ".";
 
 test("should render the Search Bar", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<SearchBar />, div);
+  const root = ReactDOM.createRoot(div);
+  root.render(<SearchBar />);
 });
