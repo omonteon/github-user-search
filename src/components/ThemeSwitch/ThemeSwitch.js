@@ -29,7 +29,6 @@ function ThemeSwitch({ theme, toggleTheme }) {
       <label htmlFor="darkmode">
         DARK <MoonIcon />
       </label>
-      <div className="colormodes__focus-trick"></div>
     </fieldset>
   );
 }
