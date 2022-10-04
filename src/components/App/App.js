@@ -58,12 +58,13 @@ function App() {
         "(prefers-color-scheme: light)"
       );
       const hasMediaQueryPreference =
-        typeof preferedColorScheme.matches === "boolean";
+        typeof preferedColorScheme?.matches === "boolean";
 
       if (hasMediaQueryPreference) {
         return preferedColorScheme.matches ? "light" : "dark";
       }
     } catch (error) {
+      console.log(error);
       throw new Error("prefers-color-scheme is not supported by the browser");
     }
     return "light";
