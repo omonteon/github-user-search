@@ -16,8 +16,6 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -55,7 +53,7 @@ Users should be able to:
 
 This project helped me understand CSS grid better. While I'm not an expert yet, I certainly understand better how to build layouts using CSS Grid.
 I also learned how to use SVGR, to import svg files in a React project and still be able to style the svg.
-Finally, I learned how to setup Cypress in a windows machine.
+Finally, I did some e2e tests using Cypress.
 
 ### Continued development
 
